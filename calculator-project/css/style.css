@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font:bold 14px Aria,sans-serif;
+}
+
+html {
+    height: 100%;
+    background: white;
+    background: radial-gradient(circle, #fff 20%, #ccc);
+    background-size: cover;
+}
+
+#calculator {
+    width: 325px;
+    height: auto;
+
+    margin: 100px auto;
+    padding: 20px 20px 9PX;
+
+    background: #b0b0b0; /* Fallback color */
+    background: linear-gradient(to bottom, #d9d9d9, #a6a6a6); /* Gray gradient */
+    border-radius: 3px;
+    /* Using box shadows to create 3D effects */
+    box-shadow: 0px 4px #888888, 0px 10px 15px rgba(0,0,0,0.2);
+}
+
+#screen {
+    float: right;
+
+    height: 40px;
+    width: 212px;
+
+    padding: 0 10px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    /* Inset shadow on the screen to create indent */
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+
+    /* Typography */
+    font-size: 17px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+/* Clear Floats to make sure #calculator includes them correctly */
+.keys, .top {
+    overflow: hidden;
+}
+
+/* Applying css on all the keys */
+.keys span, #clear {
+    float: left;
+    position: relative;
+    top: 0;
+    /* Specifies the type of cursor to be displayed when pointing on an element. */
+    cursor: pointer;
+
+    width: 66px;
+    height: 36px;
+
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+    margin: 0 7px 11px 0;
+
+    color: #888;
+    line-height: 36px;
+    text-align: center;
+
+    /* prevent selection of text inside keys */
+    user-select: none;
+
+    /* Transitions allows you to change property values smoothly  */
+    transition: all 0.2s ease;
+}
+
+.keys span.operator {
+    background: #404040; /* Fallback color */
+    background: linear-gradient(to bottom, #6e6e6e, #2c2c2c); /* Dark gray gradient */
+    margin-right: 0; /* 7px in previous setting */
+}
+
+/* Eval Button */
+.keys span.eval {
+    background: #404040; /* Fallback color */
+    background: linear-gradient(to bottom, #6e6e6e, #2c2c2c); /* Dark gray gradient */
+    color: #888;
+}
+
+.keys span.eval:hover {
+    background: linear-gradient(#1a1a1a, #4d4d4d); /* Lighter black gradient for hover */
+    box-shadow: 0px 4px #333333;
+    color: white;
+
+}
+
+.keys span.eval:active {
+    box-shadow: 0px 0px #333333;    /* Matching shadow for active state */
+    top: 4px;
+}
+
+/* Clear Button */
+#clear {
+    background: #404040; /* Fallback color */
+    background: linear-gradient(to bottom, #6e6e6e, #2c2c2c); /* Dark gray gradient */
+    color: #888;
+}
+
+#clear:hover {
+    background: linear-gradient(#1a1a1a, #4d4d4d); /* Lighter black gradient for hover */
+    box-shadow: 0px 4px #333333;
+    color: white;
+}
+
+#clear:active {
+    top: 4px;
+    box-shadow: 0px 0px #333333;
+}
+
+
+/* Other Buttons */
+.keys span:hover {
+    background: rgba(211, 211, 211, 0.7); /* Light gray background on hover */
+    box-shadow: 0px 4px #a9a9a9; /* Gray shadow */
+    color: white; 
+}
+
+.keys span:active {
+    box-shadow: 0px 0px #a9a9a9; /* Matching shadow for active state */
+    top: 4px;
+}
